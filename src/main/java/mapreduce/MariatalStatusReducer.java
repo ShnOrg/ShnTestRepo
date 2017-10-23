@@ -10,7 +10,7 @@ public class MariatalStatusReducer extends TableReducer<ImmutableBytesWritable,I
 
   public void reduce(ImmutableBytesWritable key,Iterable<IntWritable> values,Context context)
       throws IOException, InterruptedException {
-    Integer sum =0;
+    Integer sum = 10;
     for (IntWritable value: values){
       sum+=value.get();
     }
