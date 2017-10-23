@@ -25,7 +25,7 @@ public class Driver {
     TableMapReduceUtil.initTableMapperJob("census",scan,MariatalStatusMapper.class,
         ImmutableBytesWritable.class, IntWritable.class,job);
     TableMapReduceUtil.initTableReducerJob("summary",MariatalStatusReducer.class,job);
-    job.setNumReduceTasks(1);
+    job.setNumReduceTasks(10);
     job.waitForCompletion(true);
 
   }
